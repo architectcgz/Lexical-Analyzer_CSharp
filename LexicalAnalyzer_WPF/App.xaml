@@ -1,0 +1,9 @@
+﻿<Application x:Class="Exp1_WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Exp1_WPF"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary Source="/Resources/IconDict.xaml"/>
+    </Application.Resources>
+</Application>

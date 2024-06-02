@@ -1,0 +1,137 @@
+﻿<Window x:Class="Exp1_WPF.LexWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="LexWindow" Height="450" Width="800">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="10">
+            
+            <!-- Keywords Section -->
+            <Grid Margin="10,10,10,10" Height="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Keywords" Height="30"/>
+                    
+                    <Button Grid.Column="1" Click="AddKeyword_Click" Foreground="Gray">
+                        <WrapPanel Height="30" Width="100">
+                            <Image Source="{StaticResource Add}" Height="20"/>
+                        </WrapPanel>
+                    </Button>
+                    
+                    <Button Grid.Column="2" Click="RemoveKeyword_Click" Foreground="Gray">
+                        <WrapPanel Height="30" Width="100">
+                            <Image Source="{StaticResource Delete}" Height="20"/>
+                        </WrapPanel>
+                    </Button>
+                </Grid>
+
+                <ListBox Grid.Row="1" x:Name="KeywordsListBox" ItemsSource="{Binding Keywords}" Height="100"/>
+            </Grid>
+
+            <!-- Relational Operators Section -->
+            <Grid Margin="10,10,10,10" Height="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Relation Operators" Height="30"/>
+                    
+                    <Button Grid.Column="1" Click="AddRelationOperator_Click">
+                        <WrapPanel Height="30" Width="100">
+                            <Image Source="{StaticResource Add}" Height="20"/>
+                        </WrapPanel>
+                    </Button>
+                    
+                    <Button Grid.Column="2" Click="RemoveRelationOperator_Click">
+                        <WrapPanel Height="30" Width="100">
+                            <Image Source="{StaticResource Delete}" Height="20"/>
+                        </WrapPanel>
+                    </Button>
+                </Grid>
+
+                <ListBox Grid.Row="1" x:Name="RelationOperatorsListBox" Height="100"/>
+            </Grid>
+
+            <!-- Arithmetic Operators Section -->
+            <Grid Margin="10,10,10,10" Height="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Arithmetic Operators" Height="30"/>
+                    
+                    <Button Grid.Column="1" Click="AddArithmeticOperator_Click">
+                        <WrapPanel Height="30" Width="100">
+                            <Image Source="{StaticResource Add}" Height="20"/>
+                        </WrapPanel>
+                    </Button>
+                    
+                    <Button Grid.Column="2" Click="RemoveArithmeticOperator_Click">
+                        <WrapPanel Height="30" Width="100">
+                            <Image Source="{StaticResource Delete}" Height="20"/>
+                        </WrapPanel>
+                    </Button>
+                </Grid>
+
+                <ListBox Grid.Row="1" x:Name="ArithmeticOperatorsListBox" ItemsSource="{Binding Keywords}" Height="100"/>
+            </Grid>
+
+            <!-- Separators Section -->
+            <Grid Margin="10,10,10,10" Height="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Separators" Height="30"/>
+                    
+                    <Button Grid.Column="1" Click="AddSeparator_Click">
+                        <WrapPanel Height="30" Width="100">
+                            <Image Source="{StaticResource Add}" Height="20"/>
+                        </WrapPanel>
+                    </Button>
+                    
+                    <Button Grid.Column="2" Click="RemoveSeparator_Click">
+                        <WrapPanel Height="30" Width="100">
+                            <Image Source="{StaticResource Delete}" Height="20"/>
+                        </WrapPanel>
+                    </Button>
+                </Grid>
+
+                <ListBox Grid.Row="1" x:Name="SeparatorsListBox" ItemsSource="{Binding Keywords}" Height="100"/>
+            </Grid>
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>
